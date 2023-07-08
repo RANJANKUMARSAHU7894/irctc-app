@@ -24,6 +24,7 @@ public class IrctcRestController {
 	public ResponseEntity<String> bookTicket(@RequestBody PassengerRequest request) {
 		String pnr = service.bookTicket(request);
 		System.out.println("this is controller");
+		System.out.println("second");
 		String msg = "Ticket Booking completed ::" + pnr;
 		return new ResponseEntity<>(msg, HttpStatus.OK);
 	}
