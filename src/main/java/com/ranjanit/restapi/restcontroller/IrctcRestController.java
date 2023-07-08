@@ -23,6 +23,7 @@ public class IrctcRestController {
 	@PostMapping(value = "/bookticket", consumes = { "application/xml", "application/json" })
 	public ResponseEntity<String> bookTicket(@RequestBody PassengerRequest request) {
 		String pnr = service.bookTicket(request);
+		System.out.println("this is controller");
 		String msg = "Ticket Booking completed ::" + pnr;
 		return new ResponseEntity<>(msg, HttpStatus.OK);
 	}
